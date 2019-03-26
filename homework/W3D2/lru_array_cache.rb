@@ -8,16 +8,16 @@ class LRUCache
     @cache.count
   end
 
-  def add(el)
-    if idx = @cache.find_index(el)
-      @cache.delete_at(idx)
-      @cache << el
+  def add(el) # O(n)
+    if idx = @cache.find_index(el) # O(n)
+      @cache.delete_at(idx) # O(n)
+      @cache << el # O(1)
       return
     end
     if count == @max_size
-      @cache.shift(1)
+      @cache.shift(1) # O(n)
     end
-    @cache << el
+    @cache << el # O(1)
   end
 
   def show
