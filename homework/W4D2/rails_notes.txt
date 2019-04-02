@@ -1,0 +1,117 @@
+group :development do
+  # Run 'bundle exec annotate' in Terminal to add helpful comments to models.
+  gem 'annotate'
+
+  # These two give you a great error handling page.
+  # But make sure to never use them in production!
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  # Gotta have byebug...
+  gem 'byebug'
+
+  # pry > irb
+  gem 'pry-rails'
+end
+
+
+rails
+    new demo_project -G --database=postgresql
+    generate
+        migration MigrationName
+    console
+        reload!
+    db:
+        create
+        migrate
+        rollback
+        schema:load
+    dbconsole
+
+migration_files
+    def change
+        create_table :products do |t|
+            t.string :name
+                null: false
+                default: value
+            t.text :description
+            t.float :price
+            t.boolean
+            t.date
+            t.datetime
+            t.integer
+            t.text
+            t.time
+            t.timestamps
+        end
+        add_column
+        rename_column
+        rename_table
+        add_index
+            unique: true
+    end
+
+    def up
+        change_column
+        remove_column
+    end
+
+    def down
+
+    end
+
+ApplicationRecord
+    .<property>
+    .all
+    .create
+    .destroy
+    .errors
+        .full_messages
+    .find
+    .find_by
+    .first
+    .last
+    .new
+    .save
+    .save!
+    .valid?
+    .where
+    collection
+        .pluck
+    relationships
+        belongs_to 
+            primary_key: 
+            foreign_key: 
+            class_name: 
+            optional: 
+        has_many
+            through: 
+            source: 
+        has_one
+    validation
+        validates
+            presence
+            uniqueness
+            format
+            length
+            numericality
+            inclusion
+            options
+                scope
+                minimum
+                maximum
+                greater_than/greater_than_or_equal_to
+                less_than/less_than_or_equal_to
+                in
+                message
+                allow_nil/:allow_blank
+                if
+                unless
+        validate
+            errors[:discount] << 'can\'t be greater than total value'
+        errors[:base]
+        Custom#validate_each
+
+        
+
+
