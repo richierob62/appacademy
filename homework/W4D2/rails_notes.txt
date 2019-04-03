@@ -64,6 +64,7 @@ ApplicationRecord
     .<property>
     .all
     .create
+    .count
     .destroy
     .errors
         .full_messages
@@ -71,11 +72,14 @@ ApplicationRecord
     .find_by
     .first
     .last
+    .load
     .new
     .save
     .save!
+    .to_a
     .valid?
     .where
+    .where_values_hash
     collection
         .pluck
     relationships
@@ -112,6 +116,49 @@ ApplicationRecord
         errors[:base]
         Custom#validate_each
 
-        
+Active Record Relation
+    joined_includes_values
+    load
+    none?
+    one?
+    reload
+    to_a
+    where_values_hash
+    attributes
+
+ActiveRecord::QueryMethods
+    distinct
+    eager_load
+    group
+    having
+    includes(:associations...)
+    joins(:associations...)
+    left_joins
+    limit
+    offset
+    or
+    order
+    select
+    where
+    scope
+
+ActiveRecord::??
+    first_or_create
+    first_or_initialize
+    find_each
+    find
+    find_by
+    to_sql
+    explain
+    find_by
+    find_by_sql
+    pluck
+    count
+    sum
+    average
+    minimum
+    maximum
+
+
 
 
