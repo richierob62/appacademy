@@ -68,3 +68,16 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end
+
+
+def log_in_test_user
+  create(:user)
+  visit new_session_url
+  fill_in("username", with: "anyone")
+  fill_in("password", with: "password")
+  click_button("Sign In")
+end

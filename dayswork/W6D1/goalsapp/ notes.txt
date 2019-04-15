@@ -37,6 +37,9 @@ tests
                 with.library :rails
             end
         end
+        RSpec.configure do |config|
+            config.include FactoryBot::Syntax::Methods
+        end
     model factory
         my_app/spec/factories.rb
 
