@@ -3,3 +3,4 @@
 .byebug_history
 */**/.byebug_history
 .vscode
+*/**/node_modules/
